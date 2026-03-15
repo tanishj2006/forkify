@@ -10,3 +10,4 @@ const timeout = function (s) {
 
 // NEW API URL (instead of the one shown in the video)
 // https://forkify-api.jonas.io
+console.log('Test');
