@@ -28,7 +28,7 @@ export const loadRecipe = async function (id) {
       cookingTime: recipe.cooking_time,
       ingredients: recipe.ingredients,
     };
-    console.log(state.recipe);
+    // console.log(state.recipe);
 
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
@@ -92,4 +92,15 @@ export const deleteBookmark = function (id) {
 
   if (id === state.recipe.id) state.recipe.bookmarked = false;
   persistBookmarks();
+};
+
+const init = function () {
+  const storage = localStorage.getItem('bookmarks');
+  if (storage) state.bookmarks = JSON.parse(storage);
+};
+
+init();
+
+const clearBookmarks = function () {
+  localStorage.clear('bookmarks');
 };
