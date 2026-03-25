@@ -85,10 +85,11 @@ const controlBookmarks = function () {
 
 const controlAddRecipe = async function (newRecipe) {
   try {
+    // Show loading Spinner
     addRecipeView.renderSpinner();
 
+    // Upload the new recipe
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     // Render Recipe
     recipeView.render(model.state.recipe);
@@ -106,9 +107,24 @@ const controlAddRecipe = async function (newRecipe) {
     setTimeout(function () {
       addRecipeView.toggleWindow();
     }, MODAL_CLOSE_SEC * 1000);
+
+    // Rendering new form
+    setTimeout(() => {
+      addRecipeView._renderForm();
+    }, MODAL_CLOSE_SEC * 1100);
   } catch (err) {
-    console.error(err);
+    // Rendering error
     addRecipeView.renderError(err.message);
+
+    // Closing the rendered error window
+    setTimeout(() => {
+      addRecipeView.toggleWindow();
+    }, MODAL_CLOSE_SEC * 1000);
+
+    // Rendered new window
+    setTimeout(() => {
+      addRecipeView._renderForm();
+    }, MODAL_CLOSE_SEC * 1100);
   }
 };
 
