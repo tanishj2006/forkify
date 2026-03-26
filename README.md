@@ -58,17 +58,40 @@ Forkify is a modern recipe web application that allows users to search, view, an
 forkify/
 │
 ├── src/
+│ ├── img/
+│ │ ├── icons.svg
+│ │ ├── logo.png
+│ │ └── favicon.png
+│ │
 │ ├── js/
 │ │ ├── model.js
 │ │ ├── controller.js
-│ │ ├── views/
-│ │ └── helpers.js
+│ │ ├── config.js
+│ │ ├── helpers.js
+│ │ └── views/
+│ │ ├── View.js
+│ │ ├── recipeView.js
+│ │ ├── resultsView.js
+│ │ ├── bookmarksView.js
+│ │ ├── searchView.js
+│ │ ├── paginationView.js
+│ │ └── addRecipeView.js
 │ │
-│ ├── img/
 │ └── sass/
+│ ├── \_base.scss
+│ ├── \_components.scss
+│ ├── \_header.scss
+│ ├── \_preview.scss
+│ ├── \_recipe.scss
+│ ├── \_searchResults.scss
+│ ├── \_upload.scss
+│ └── main.scss
 │
 ├── index.html
 ├── package.json
+├── package-lock.json
+├── .gitignore
+├── .prettierrc
 └── README.md
 
 ---
