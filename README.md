@@ -49,6 +49,7 @@ Forkify is a modern recipe web application that allows users to search, view, an
 ![Search Result and Recipe View](image-1.png)
 ![Bookmarks list](image-2.png)
 ![Recipe Upload Form](image-3.png)
+![Flow Chart](forkify-flowchart.png)
 
 ---
 
