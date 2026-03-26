@@ -5,10 +5,9 @@
   "license": "ISC",
   "author": "Tanish",
   "type": "commonjs",
-  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html --dist-dir dist"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.4",
