@@ -55,8 +55,9 @@ Forkify is a modern recipe web application that allows users to search, view, an
 
 ## 📂 Project Structure
 
+```
 forkify/
-│
+|
 ├── src/
 │ ├── img/
 │ │ ├── icons.svg
@@ -93,6 +94,7 @@ forkify/
 ├── .gitignore
 ├── .prettierrc
 └── README.md
+```
 
 ---
 
